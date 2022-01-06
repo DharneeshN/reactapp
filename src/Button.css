@@ -1,0 +1,12 @@
+.Buttons {
+    display: inline-block;
+    width: 70px; 
+    height: 30px; 
+    text-align: center;
+    border:black;
+    background-color: #E8562A;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+  }
