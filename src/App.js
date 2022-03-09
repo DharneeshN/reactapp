@@ -19,7 +19,7 @@ function App() {
           <Route
             exact
             path="/Home"
-            element={<Home descrip="Description" Naam="Dharneesh here" />}
+            element={<Home descrip="This is my page" Naam="Dharneesh here" />}
           />
           <Route path="/Aboutme" element={<Aboutme />} />
           <Route

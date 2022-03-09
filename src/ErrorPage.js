@@ -1,5 +1,5 @@
 import React , { useEffect, useState } from 'react'
-import {Grid,Paper,Container}  from '@mui/material'
+import {Grid,Paper}  from '@mui/material'
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
@@ -14,6 +14,16 @@ function ErrorPage() {
 
     const [employeeList, setemployeeList] = useState(JSON.parse(localStorage.getItem("employeeList")) || [])
    
+
+    console.log("OUt print")
+    
+    useEffect(()=>{
+    console.log("first");
+     return()=>{
+       console.log("unmount")
+     }
+    },[])
+
     useEffect(() => {
         console.log("in");
         if(employeeList.length === 0){
@@ -26,12 +36,13 @@ function ErrorPage() {
         }
       }, [])
     
-      console.log(employeeList);
+      // console.log(employeeList);
     return (
-      <Container>
+      <>
+    <div>
           <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={3}>
-          <Paper>1</Paper>
+          <Paper>2</Paper>
         </Grid>
         <Grid item xs={12} sm={6} md={3} >
           <Paper>2</Paper>
@@ -50,12 +61,14 @@ function ErrorPage() {
           return (
             <Grid item xs={12}   md={6} lg={4}  key={employee.id}>
               <Paper className={classes.GridStyle}>{employee.login}</Paper>
+              <Paper className={classes.GridStyle}>{employee.node_id}</Paper>
             </Grid>
           )
         })
       }
        </Grid>
-       </Container>
+       </div>
+       </>
     )
 }
 
