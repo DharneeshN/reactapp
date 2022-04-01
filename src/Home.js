@@ -27,7 +27,7 @@ function Home({descrip,Naam}) {
             <button onClick={changeAge} data-testid="Button1">click here to know my age</button>
             <br/> 
             <br/>
-           <h4>Please give Feedback</h4>
+           <h4>Feedback are appreciated</h4>
             <input type="text" data-testid="searchtext" placeholder='Feedback'
             onChange={(e)=>{setFeed(e.target.value);}}/>
            <h1 data-testid="displaytext"  >{Feed}</h1>
